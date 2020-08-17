@@ -1,93 +1,86 @@
 .body1 {
   align-items: center;
   justify-content: space-around;
-  text-align: right;
-
 }
 
 .company_name {
+  z-index: 1;
   position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
+  display: flex;
   color: white;
-  top: 25%;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.company_name .left h1 {
-  font-size: 15vw;
-  text-align: left;
-  align-items: stretch;
-  font-weight: bolder;
+.left {
+  background-color: #0f3974b7;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-content: center;
+  padding: 5vh 10% 5vh 5%;
 }
 
 .left h1 {
-  position: relative;
-  left: 20%;
+  margin: 1vw;
+  margin-bottom: 0;
+  font-size: 5vw;
+  font-weight: bold;
   color: white;
-  font-size: .5em;
 }
 
-.company_name .right {
-  position: relative;
-  right: 18%;
+.left p {
+  margin-left: 1vw;
+  margin-bottom: .5vh;
+  margin-top: 1vh;
+  font-size: 1vw;
+  color: white;
 }
 
-.company_name .right img {
-  filter: invert(100);
-  top: 20vh;
-  right: 50px;
-  width: 28vw;
+.right {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.demoSignup {
+  height: 20vh;
+  width: 100%;
+  background-color: #ffe8158c;
+  margin: 10px;
+  padding: 10px;
+  letter-spacing: 1.4px;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+
+.demoSignup:hover {
+  transition: all .5s;
+  background-color: #ffe815;
+  ;
 }
 
 .videoLay {
   overflow: hidden;
-  width: 100vw;
   height: 100vh;
   object-fit: cover;
-  /* background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.8393732492997199) 0%, rgba(0, 0, 0, 0.44441526610644255) 15%, rgba(0, 0, 0, 0.46682422969187676) 84%, rgba(0, 0, 0, 0.8169642857142857) 100%);
+  background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.8393732492997199) 0%, rgba(0, 0, 0, 0.44441526610644255) 15%, rgba(0, 0, 0, 0.46682422969187676) 84%, rgba(0, 0, 0, 0.8169642857142857) 100%);
   background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.8393732492997199) 0%, rgba(0, 0, 0, 0.44441526610644255) 15%, rgba(0, 0, 0, 0.46682422969187676) 84%, rgba(0, 0, 0, 0.8169642857142857) 100%);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8393732492997199) 0%, rgba(0, 0, 0, 0.44441526610644255) 15%, rgba(0, 0, 0, 0.46682422969187676) 84%, rgba(0, 0, 0, 0.8169642857142857) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1); */
-
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
 }
 
 #background-video {
-  /* filter: blur(1px) grayscale(100); */
   position: relative;
   object-fit: cover;
   object-position: 30% 30%;
   z-index: -5;
   width: 100vw;
   height: 100vh;
-}
-
-
-.links {
-  grid-column-start: span 2;
-  font-weight: 500;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.demoSignup {
-  font-size: 2vw;
-  height: 10vh;
-  width: 25vw;
-  background-color: rgba(255, 255, 255, 0.707);
-  border-radius: 12px;
-  font-weight: bolder;
-  color: #4831d4;
-}
-
-
-.demoSignup:hover {
-    background-color: #4831d4;
-    color: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.419);
-  transition: box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (max-width: 640px) {
@@ -101,7 +94,6 @@
     align-items: flex-end;
     justify-content: center;
   }
-
   .demoSignup {
     border: 2px solid rgb(195, 204, 255);
     font-size: 20px;
@@ -113,15 +105,12 @@
     font-size: 20px;
     color: rgb(255, 255, 255);
   }
-
   .body1 {
     height: 50vh;
     align-items: center;
     justify-content: space-around;
     text-align: right;
-
   }
-
   #background-video {
     filter: blur(1px) grayscale(100);
     position: relative;
@@ -131,12 +120,9 @@
     width: 100vw;
     height: 50vh;
   }
-
 }
 
-
 @media (max-height: 540px) {
-
   .company_name {
     position: absolute;
     display: grid;
@@ -145,30 +131,22 @@
     color: white;
     top: 25%;
   }
-
   .company_name .left h1 {
     font-size: 15vw;
     text-align: left;
     align-items: stretch;
     font-weight: bolder;
   }
-  
   .left h1 {
     position: relative;
     left: 5%;
-  
   }
-  
   .company_name .right {
     position: relative;
-  
   }
-  
   .company_name .right img {
     filter: invert(100);
     top: 19px;
     width: 30vw;
   }
 }
-
-

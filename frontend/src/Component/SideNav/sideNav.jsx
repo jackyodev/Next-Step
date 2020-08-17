@@ -54,155 +54,155 @@ const NavSubTitle = styled.div`
 `;
 
 class SideNavMenu extends Component {
-    constructor () {
-        super ()
+    constructor() {
+        super()
         this.state = {
             activeTab: ''
         }
     }
 
-    logOutUser = ()=> {
-    axios
-      .post("/api/users/logout")
-      .then(() => {
-        Auth.deauthenticateUser()
-      }).then(()=>{
-          Auth.deauthenticateUser()
-      })
-  }
+    logOutUser = () => {
+        axios
+            .post("/api/users/logout")
+            .then(() => {
+                Auth.deauthenticateUser()
+            }).then(() => {
+                Auth.deauthenticateUser()
+            })
+    }
 
 
-    render () {
+    render() {
         const { activeTab } = this.state
         return (
             <div className='sideContainer'>
-               <SideNav onSelect={(selected) => {
-                   const { location, history } = this.props
-                   const route = `/${selected}`
-                   if (location.pathname !== route) {
-                       history.push(route)
-                   }
-                   this.setState({ activeTab: selected })
+                <SideNav onSelect={(selected) => {
+                    const { location, history } = this.props
+                    const route = `/${selected}`
+                    if (location.pathname !== route) {
+                        history.push(route)
+                    }
+                    this.setState({ activeTab: selected })
                 }}>
 
-<SideNav.Toggle onClick={this.props.toggleSideNav}/>
-<NavHeader expanded = {this.props.expanded} >
+                    <SideNav.Toggle onClick={this.props.toggleSideNav} />
+                    <NavHeader expanded={this.props.expanded} >
 
-<NavTitle> Next Step <img className = "sideBarLogo" src = {logo} alt = "Circled Home" width= "20" /> </NavTitle>
-{/* <NavSubTitle> The Platform To Help You With Your Next Step. </NavSubTitle> */}
-</NavHeader>
+                        <NavTitle> Next Step <img className="sideBarLogo" src={logo} alt="Circled Home" width="20" /> </NavTitle>
+                        {/* <NavSubTitle> The Platform To Help You With Your Next Step. </NavSubTitle> */}
+                    </NavHeader>
 
-<SideNav.Nav>
-<NavItem
-className = "dashboard"
-eventKey='home'
-active={activeTab === 'home' ? true : false}>
-                        <NavIcon>
+                    <SideNav.Nav>
+                        <NavItem
+                            className="dashboard"
+                            eventKey='home'
+                            active={activeTab === 'home' ? true : false}>
+                            <NavIcon>
                                 <div className='sideBarIcon'>
-                                    <img src = {homeIcon2} alt = "Circled Home" width= "35" />
+                                    <img src={homeIcon2} alt="Circled Home" width="35" />
                                 </div>
-                        </NavIcon>
-                        <NavText>
-                         Home
+                            </NavIcon>
+                            <NavText>
+                                Home
                         </NavText>
-                    </NavItem>
+                        </NavItem>
 
-                    <NavItem
-                    className = "sideNav_questions"
-                    eventKey='questions'
-                    active={activeTab === 'questions' ? true : false}>
-                        <NavIcon>
+                        <NavItem
+                            className="sideNav_questions"
+                            eventKey='questions'
+                            active={activeTab === 'questions' ? true : false}>
+                            <NavIcon>
                                 <div className='sideBarIcon'>
                                     {/* {questionsIcon} */}
-                                    <img src = {questionsIcon2} alt = "Circled Q" width= "35" />
+                                    <img src={questionsIcon2} alt="Circled Q" width="35" />
                                 </div>
-                        </NavIcon>
-                        <NavText>
-                            Questions
+                            </NavIcon>
+                            <NavText>
+                                Questions
                         </NavText>
-                    </NavItem>
+                        </NavItem>
 
-                    <NavItem
-                    className = "sideNav_answers"
-                    eventKey='answers'
-                    active={activeTab === 'answers' ? true : false}>
-                        <NavIcon>
+                        <NavItem
+                            className="sideNav_answers"
+                            eventKey='answers'
+                            active={activeTab === 'answers' ? true : false}>
+                            <NavIcon>
                                 <div className='sideBarIcon'>
                                     {/* {answerIcon2} */}
-                                    <img src = {answerIcon2} alt = "Circled A" width = "35" />
+                                    <img src={answerIcon2} alt="Circled A" width="35" />
 
                                 </div>
-                        </NavIcon>
-                        <NavText>
-                           My Answers
+                            </NavIcon>
+                            <NavText>
+                                My Answers
                         </NavText>
-                    </NavItem>
+                        </NavItem>
 
-                    <NavItem
-                    className = "sideNav_leaderboard"
-                    eventKey='leaderboard'
-                    active={ activeTab === 'leaderboard' ? true : false}>
-                        <NavIcon>
+                        <NavItem
+                            className="sideNav_leaderboard"
+                            eventKey='leaderboard'
+                            active={activeTab === 'leaderboard' ? true : false}>
+                            <NavIcon>
                                 <div className='sideBarIcon'>
                                     {/* {tipsIcon} */}
-                                    <img src = {leaderboardIcon2} alt = "ranking icon " width = "35" />
+                                    <img src={leaderboardIcon2} alt="ranking icon " width="35" />
                                 </div>
-                        </NavIcon>
-                        <NavText>
+                            </NavIcon>
+                            <NavText>
                                 Ranking Board
                         </NavText>
-                    </NavItem>
+                        </NavItem>
 
-                    <NavItem
-                    className = "sideNav_tips"
-                    eventKey='advice'
-                    active={activeTab === 'advice' ? true : false}>
-                        <NavIcon>
+                        <NavItem
+                            className="sideNav_tips"
+                            eventKey='advice'
+                            active={activeTab === 'advice' ? true : false}>
+                            <NavIcon>
                                 <div className='sideBarIcon'>
                                     {/* {tipsIcon} */}
-                                    <img src = {tipsIcons2} alt = "Light Bulb Icon" width = "35" />
+                                    <img src={tipsIcons2} alt="Light Bulb Icon" width="35" />
                                 </div>
-                        </NavIcon>
-                        <NavText>
+                            </NavIcon>
+                            <NavText>
                                 Advice
                         </NavText>
-                    </NavItem>
+                        </NavItem>
 
 
 
-                    <NavItem
-                    className = "sideNav_about"
-                    eventKey='about'
-                    active={activeTab === 'about' ? true : false}>
-                        <NavIcon>
+                        <NavItem
+                            className="sideNav_about"
+                            eventKey='about'
+                            active={activeTab === 'about' ? true : false}>
+                            <NavIcon>
                                 <div className='sideBarIcon'>
                                     {/* {aboutIcon2} */}
-                                    <img src = {aboutIcon2} alt = "Circled I" width = "35" />
+                                    <img src={aboutIcon2} alt="Circled I" width="35" />
                                 </div>
-                        </NavIcon>
-                        <NavText>
+                            </NavIcon>
+                            <NavText>
                                 About
                         </NavText>
-                    </NavItem>
+                        </NavItem>
 
-                    <NavItem
+                        <NavItem
 
-                    className = "sideNav_logout"
-                    eventKey='logout'
-                    active={activeTab === 'logout' ? true : false}
-                    >
-                        <NavIcon>
+                            className="sideNav_logout"
+                            eventKey='logout'
+                            active={activeTab === 'logout' ? true : false}
+                        >
+                            <NavIcon>
                                 <div className='sideBarIcon'>
                                     {/* {aboutIcon2} */}
-                                    <img src = {shutdownIcon2} alt = "Circled Shutdown" width = "35" />
+                                    <img src={shutdownIcon2} alt="Circled Shutdown" width="35" />
                                 </div>
-                        </NavIcon>
-                        <NavText>
+                            </NavIcon>
+                            <NavText>
                                 Logout
                         </NavText>
-                    </NavItem>
-                </SideNav.Nav>
-            </SideNav>
+                        </NavItem>
+                    </SideNav.Nav>
+                </SideNav>
             </div>
         )
     }
@@ -211,19 +211,3 @@ active={activeTab === 'home' ? true : false}>
 export default withRouter(SideNavMenu)
 
 
-
-
-// <NavItem
-//                     className = "sideNav_logout"
-//                     eventKey='/search/:search/:filter'
-//                     active={activeTab === '/search/:search/:filter' ? true : false}>
-//                         <NavIcon>
-//                                 <div className='sideBarIcon'>
-//                                     {/* {aboutIcon2} */}
-//                                     <img src = {searchIcon2} alt = "Circled S" width = "35" />
-//                                 </div>
-//                         </NavIcon>
-//                         <NavText>
-//                                 Search
-//                         </NavText>
-//                     </NavItem>

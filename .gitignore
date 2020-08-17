@@ -10,3 +10,5 @@ public/style.css
 *.min.js
 *.min.js.map
 
+package-lock
+yarn-lock

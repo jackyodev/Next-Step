@@ -37,35 +37,38 @@ this.props.history.push("/home")
 
 
 render(){
-  return(
+  return (
     <>
-    <div className='body1'>
+      <div className="body1">
+        <div className="company_name">
+          <div className="left">
+            <h1> NEXT STEP </h1>
+            <p>
+              An interactive web platform built to help the user become a better
+              candidate during the interview process.
+            </p>
+            <p>
+              Practice answering behavioral and general
+              interview questions while getting constructive feedback from other users.
+            </p>
+          </div>
+          <div className="right">
+            <button className="demoSignup" onClick={() => this.demo_function()}>
+              Demo
+            </button>
+          </div>
 
+          <div className="links"></div>
+        </div>
 
-
-
-    <div className = "company_name">
-    <div className ="left">
-    <h1> NEXT STEP </h1>
-    </div>
-
-    <div className="right">
-    <img src= {logo} alt="next-step_logo" />
-    </div>
-
-    <div className='links'>
-    <button className='demoSignup' onClick = {() => this.demo_function()}>Demo Login</button>
-    </div>
-    </div>
-
-    <div className = "videoLay">
-    <video id="background-video" loop autoPlay>
-    <source src={video3} type="video/mp4"/>
-    </video>
-    </div>
-    </div>
+        <div className="videoLay">
+          <video id="background-video" loop autoPlay>
+            <source src={video3} type="video/mp4" />
+          </video>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 }
 
