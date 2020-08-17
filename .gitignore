@@ -11,4 +11,4 @@ public/style.css
 *.min.js.map
 
 package-lock
-yarn-lock
+yarn.lock
