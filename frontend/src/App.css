@@ -1,24 +1,48 @@
 body {
- background-color: rgb(255, 255, 255);
-
+  background-color: rgb(255, 255, 255);
 }
 
 /* This Resets All Buttons to Empty Style */
+
 button {
- background: none;
- /* color: inherit; */
- border: none;
- padding: 0;
- font: inherit;
- cursor: pointer;
- /* font-style: #171A26; */
+  background: none;
+  /* color: inherit; */
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  /* font-style: #171A26; */
 }
 
 button {
- outline: none;
+  outline: none;
 }
 
 a {
- outline: none;
+  outline: none;
+}
+
+h1, h2 {
+  text-decoration: none;
+  position: relative;
+  padding: 1vw;
+}
+
+
+h1::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 50%;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+  background-image: linear-gradient(120deg, #fae884 0%, #49b0e4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  /* transition: background-size 0.25s ease-in; */
 }
 

@@ -23,7 +23,8 @@
   padding: 5vh 10% 5vh 5%;
 }
 
-.left h1 {
+.header {
+  text-align: left;
   margin: 1vw;
   margin-bottom: 0;
   font-size: 5vw;
@@ -32,6 +33,7 @@
 }
 
 .left p {
+  line-height: 1.2;
   margin-left: 1vw;
   margin-bottom: .5vh;
   margin-top: 1vh;
@@ -50,17 +52,20 @@
 .demoSignup {
   height: 20vh;
   width: 100%;
-  background-color: #ffe8158c;
+  background-color: #ffe815;
   margin: 10px;
   padding: 10px;
   letter-spacing: 1.4px;
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-weight: bolder;
+  transition: all .5s;
+  color: #0f3974;
 }
 
 .demoSignup:hover {
   transition: all .5s;
-  background-color: #ffe815;
+  color: #ffe815;
+  background-color: #0f3974;
   ;
 }
 
@@ -81,72 +86,4 @@
   z-index: -5;
   width: 100vw;
   height: 100vh;
-}
-
-@media screen and (max-width: 640px) {
-  .links {
-    position: relative;
-    text-align: center;
-    color: #a4b8ffc1;
-    width: 100vw;
-    font-weight: 500;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .demoSignup {
-    border: 2px solid rgb(195, 204, 255);
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0);
-    color: black;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-  }
-  .body1 {
-    height: 50vh;
-    align-items: center;
-    justify-content: space-around;
-    text-align: right;
-  }
-  #background-video {
-    filter: blur(1px) grayscale(100);
-    position: relative;
-    object-fit: cover;
-    object-position: 100% 30%;
-    z-index: -5;
-    width: 100vw;
-    height: 50vh;
-  }
-}
-
-@media (max-height: 540px) {
-  .company_name {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    color: white;
-    top: 25%;
-  }
-  .company_name .left h1 {
-    font-size: 15vw;
-    text-align: left;
-    align-items: stretch;
-    font-weight: bolder;
-  }
-  .left h1 {
-    position: relative;
-    left: 5%;
-  }
-  .company_name .right {
-    position: relative;
-  }
-  .company_name .right img {
-    filter: invert(100);
-    top: 19px;
-    width: 30vw;
-  }
 }

@@ -42,7 +42,7 @@ render(){
       <div className="body1">
         <div className="company_name">
           <div className="left">
-            <h1> NEXT STEP </h1>
+            <div className = "header"> NEXT STEP </div>
             <p>
               An interactive web platform built to help the user become a better
               candidate during the interview process.
