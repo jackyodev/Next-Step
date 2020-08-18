@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 // import { NavLink } from 'react-router-dom'
+import About from "../About/about";
+
 
 import './body2.css'
 
@@ -9,8 +11,7 @@ render(){
   return(
 
     <div className='body2'>
-    <div className = "wrapper">
-      <div className='tools'>Tools To Help You With Your Next Step</div>
+      <div className='title'> <h1> Why Next Step? </h1></div>
       <div className = 'cardContainer'>
         <div className = 'cards'>
           <h2 className='cardLabel'>Practice</h2>
@@ -25,7 +26,6 @@ render(){
           <p className='cardInfo'>Take a look at the helpful tips for before, during and after your interview that will give you a step above the competion. Small details make the big picture.</p>
         </div>
       </div>
-    </div>
     </div>
 
   )

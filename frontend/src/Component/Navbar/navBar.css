@@ -18,14 +18,17 @@
 }
 
 .nav {
-    margin: max(1.5vw, 20px);
+    margin-left: max(1.5vw, 20px);
+    margin-right: max(1.5vw, 20px);
     text-align: center;
     font-size: 20px;
     color: white;
+    padding: 10px;
 }
 
 .nav:hover {
-    color: #FFE915;
+    background-color: #FFE915;
+    color: #0F3974;
 }
 
 .nav:focus {
@@ -37,12 +40,13 @@
 }
 
 .logoLanding img {
+    padding: 1px;
     margin: 1vh;
     margin-left: 2vw;
     margin-bottom: 0;
     filter: invert(100);
     min-width: 40px;
-    width: 2vw;
+    width: 2.2vw;
     max-width: 50px;
 }
 
@@ -51,10 +55,10 @@
     transform: rotate(50deg);
 }
 
-.logoLanding h1 {
+.logoLanding > .nav_header {
     margin: 10px;
     margin-top: 0;
-    margin-left: 1.25vw;
+    margin-left: 1.7vw;
     text-align: center;
     width: max-content;
     word-wrap: none;

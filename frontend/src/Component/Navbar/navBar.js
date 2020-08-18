@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./navBar.css";
-// import axios from 'axios'
-// import Auth from '../../Auth/Auth.js'
+
 
 const logo = require("../../Images/nextStepLogo.png");
 
@@ -15,7 +14,7 @@ class NavBar extends Component {
           <NavLink to="/">
             <img src={logo} alt="next-step_logo" />
           </NavLink>
-            <h1> Next Step </h1>
+            <div className = "nav_header"> Next Step </div>
         </div>
 
         <div className="nav__container">
@@ -25,9 +24,9 @@ class NavBar extends Component {
           <NavLink className="nav" to="/signup">
             Sign Up
           </NavLink>
-          <NavLink className="nav" to="/about">
+          {/* <NavLink className="nav" to="/about">
             About
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
     );
